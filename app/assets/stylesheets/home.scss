@@ -1,0 +1,287 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400);
+
+body{
+  background: #28402E;;
+}
+
+hr{
+  border: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+#navheader{
+  background-color: transparent;
+  z-index: 2;
+}
+
+.btn-floating{
+  background-color: #28402E;
+}
+
+.btn-floating:hover{
+  background-color: #456e4f;
+}
+
+nav a.btn-floating.btn-large{
+  height: 100px;
+  width: 100px;
+  margin-top: 15px;
+  margin-right: 20px;
+}
+
+#userimg{
+  margin-top: 5px;
+  width: 90px;
+}
+
+#exitimg{
+  margin-top: 1px;
+  width: 80px;
+  height: 100px;
+}
+
+#leftSideMenubtn{
+  height: 100px;
+  width: 100px;
+}
+
+#leftSideMenuBadge{
+  height: 90%;
+  width: 90%;
+  padding-top: 10px;
+}
+
+#sidenavimg{
+  padding-top: 25px;
+}
+
+#signedinindicator{
+  position: absolute;
+  top: 120px;
+}
+
+#userdeviseforms{
+  background-color: #fff;
+  border-radius: 25px;
+  border: 2px solid #a1a1a1;
+  margin-top: 60px;
+  padding: 0px 40px 20px;
+}
+
+nav a.button-collapse{
+  padding-top: 15px;
+  padding-left: 40px;
+}
+
+.nav-wrapper ul { 
+    list-style: none;
+    text-align: left;
+}
+
+.nav-wrapper ul li { 
+    display: inline;
+}
+
+.nav-wrapper ul li a{
+  color: #fff;
+}
+
+.side-nav{
+  background-color: #28402E;
+}
+
+div.drag-target:active{
+  width: 80%;
+}
+
+/* Below is CSS for modifying the scrollpane */
+
+.jspContainer
+{
+    overflow: hidden;
+    position: relative;
+}
+
+.jspPane
+{
+    position: absolute;
+}
+
+.jspVerticalBar
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 7px;
+    height: 100%;
+    background: red;
+}
+
+.jspHorizontalBar
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 7px;
+    background: #777;
+}
+
+.jspVerticalBar *,
+.jspHorizontalBar *
+{
+    margin: 0;
+    padding: 0;
+}
+
+.jspCap
+{
+    display: none;
+}
+
+.jspHorizontalBar .jspCap
+{
+    float: left;
+}
+
+.jspTrack
+{
+    background: #777;
+    position: relative;
+}
+
+.jspDrag
+{
+    background: #aaa;
+    position: relative;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag
+{
+    float: left;
+    height: 100%;
+}
+
+.jspArrow
+{
+    background: #50506d;
+    text-indent: -20000px;
+    display: block;
+    cursor: pointer;
+}
+
+.jspArrow.jspDisabled
+{
+    cursor: default;
+    background: #80808d;
+}
+
+.jspVerticalBar .jspArrow
+{
+    height: 7px;
+}
+
+.jspHorizontalBar .jspArrow
+{
+    width: 7px;
+    float: left;
+    height: 100%;
+}
+
+.jspVerticalBar .jspArrow:focus
+{
+    outline: none;
+}
+
+.jspCorner
+{
+    background: #eeeef4;
+    float: left;
+    height: 100%;
+}
+
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner
+{
+    margin: 0 -3px 0 0;
+}
+
+
+/*
+body {
+  background: #000;
+}
+
+a {
+  color: #ff0;
+}
+
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  width: 100%;
+  height: 100%;
+  
+  .hi {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+    color: #fff;
+    
+    font-family: 'Roboto Slab', serif;
+    font-size: 24px;
+    line-height: 26px;
+    text-align: center;
+    
+    span {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}
+
+.tv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+  
+  .screen {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    margin: auto;
+
+    opacity: 0;
+    transition: opacity .5s;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+}
+*/

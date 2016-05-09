@@ -1,0 +1,126 @@
+<!-- <video autoplay id="bgvid" loop>
+  <source src="https://www.youtube.com/watch?v=kwxFrvE0bI4" type="video/youtube">
+</video>
+
+<div id='wrapper'>
+    <h1>Home#index</h1>
+    <p>Find me in app/views/home/index.html.erb</p>
+</div> -->
+
+<!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+<!-- <div class="cover">
+  <div class="hi">This is fully responsive & mobile friendly YouTube video background scaled with 16/9 aspect ratio. Actually bunch of videos - js loads 1 of 4 with different start/end times, then it loops. <span>Click here to unmute</span> - all the tracks are quite awesome. ;]<br><br>Used these bits of code for <a href="http://snowboard.is" target="_blank">SNOWBOARD.IS</a> website. Enjoy!</div>
+</div>
+<div class="tv">
+	  <div class="screen mute" id="tv"></div>
+</div> -->
+<script>
+  $( document ).ready(function(){
+    $(".button-collapse").sideNav();
+    $('.slider').slider({full_width: true});
+    
+    function setHeight(a, b) {
+      windowHeight = $(window).innerHeight();
+      $(a).css('min-height', windowHeight-b);
+    };
+    setHeight("#section0",64);
+    setHeight("#section1",0);
+    setHeight("#section2",0);
+    setHeight("#section3",0);
+    
+    $(window).resize(function() {
+      setHeight("#section0",64);
+      setHeight("#section1",0);
+      setHeight("#section2",0);
+      setHeight("#section3",0);
+    });
+    $(function () {
+      $.srSmoothscroll();
+      $().jScrollPane();
+    })
+  })
+</script>
+
+<div class='container-fluid navbar-fixed' id='home'>
+  <nav class='z-depth-0' id='navheader'>
+    <div class="nav-wrapper">
+      <a href="#" data-activates="mobile-demo" class="button-collapse show-on-large"><i id='leftSideMenubtn' class="btn-floating btn-large"><img id='leftSideMenuBadge' class='responsive-img' src='/assets/army-british.png'></i></a>
+      <% if user_signed_in? %>
+        <ul class="right">
+          <li><%= link_to (image_tag(current_user.gravatar_url, :class => 'circle responsive-img', :id => 'userimg')), edit_user_registration_path, :class => 'btn-floating btn-large right' %></li>
+          <li><%= link_to (image_tag('Users-Exit-icon.png', :class => 'circle responsive-img', :id => 'exitimg')), destroy_user_session_path, method: :delete, :class => 'btn-floating btn-large right' %></li>
+        </ul>
+        <ul class="right">
+          <li><h6 id='signedinindicator' class='left-align'>Logged in as: <strong><%= current_user.email %></strong>.</h6></li>
+        </ul>
+      <% else %>
+        <ul class="right">
+          <li><%= link_to 'Sign up', new_user_registration_path, :class => 'btn-floating btn-large right' %></li>
+          <li><%= link_to 'Login', new_user_session_path, :class => 'btn-floating btn-large right' %></li>
+        </ul>
+      <% end %>
+      <ul class="side-nav" id="mobile-demo">
+        <div class='container'>
+          <img id='sidenavimg' class='responsive-img' src='/assets/army-british.png'>
+        </div>
+        <hr>
+        <li class='no-padding'><a href="#home">Home</a></li>
+        <li class='no-padding'><a href="#section1">About</a></li>
+        <li class='no-padding'><a href="#section2">Roster</a></li>
+        <li class='no-padding'><a href="/forums">Forums</a></li>
+        <li class='no-padding'><a href="mobile.html">Contact</a></li>
+        <hr>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div>
+  <div class="slider fullscreen">
+      <ul class="slides">
+        <li>
+          <img class='responsive-img' src="/assets/NR_01.jpg"> <!-- random image -->
+          <div class="caption center-align">
+            <h3>Close Air Support!</h3>
+            <h5 class="light grey-text text-lighten-3">Join the Air Corp Today!</h5>
+          </div>
+        </li>
+        <li>
+          <img class='responsive-img' src="/assets/NR_02.jpg"> <!-- random image -->
+          <div class="caption left-align">
+            <h3>Infantry Combat!</h3>
+            <h5 class="light grey-text text-lighten-3">Boots on the Ground!</h5>
+          </div>
+        </li>
+        <li>
+          <img class='responsive-img' src="/assets/NR_03.jpg"> <!-- random image -->
+          <div class="caption right-align">
+            <h3>Right Aligned Caption</h3>
+            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+          </div>
+        </li>
+        <li>
+          <img class='responsive-img' src="/assets/NR_04.jpg"> <!-- random image -->
+          <div class="caption center-align">
+            <h3>Combined Arms!</h3>
+            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+          </div>
+        </li>
+      </ul>
+  </div>
+</div>
+
+<div class='container' id='section0'>
+  <a>STRUCTURAL PLACEHOLDER DO NOT REMOVE!</a>
+</div>
+
+<div class='container' id='section1'>
+  <div class='row'>
+    <a>This is new content</a>
+  </div>
+</div>
+<div class='container' id='section2'>
+  <div class='row'>
+    <a>This is new content</a>
+  </div>
+</div>
